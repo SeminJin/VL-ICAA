@@ -296,64 +296,6 @@ experiments/your_experiment_name/best_model_epoch_{epoch}_srcc_{srcc}_acc_{acc}.
 - TensorBoard logs in `experiments/*/logs/`
 - Per-epoch metrics: train loss, validation loss, SRCC, LCC, accuracy
 
-## Citation
-
-If you use this code or the ICAA17K dataset, please cite:
-
-```bibtex
-@article{hethinking,
-  title={Thinking Image Color Aesthetics Assessment: Models, Datasets and Benchmarks},
-  author={He, Shuai and Ming, Anlong and Yaqi, Li and Jinyuan, Sun and ShunTian, Zheng and Huadong, Ma},
-  journal={ICCV},
-  year={2023}
-}
-
-@inproceedings{dat2022,
-  title={Vision Transformer with Deformable Attention},
-  author={Xia, Zhuofan and Pan, Xuran and Song, Shiji and Li, Li Erran and Huang, Gao},
-  booktitle={CVPR},
-  year={2022}
-}
-
-@inproceedings{git2022,
-  title={GIT: A Generative Image-to-text Transformer for Vision and Language},
-  author={Wang, Jianfeng and Yang, Zhengyuan and Hu, Xiaowei and Li, Linjie and Lin, Kevin and Gan, Zhe and Liu, Zicheng and Liu, Ce and Wang, Lijuan},
-  booktitle={arXiv preprint arXiv:2205.14100},
-  year={2022}
-}
-```
-
-## Troubleshooting
-
-### CUDA Out of Memory
-
-Reduce batch size:
-```bash
-python train.py --batch_size 8
-```
-
-### GIT Model Download Issues
-
-If azfuse fails, manually set environment variable:
-```bash
-export AZFUSE_TSV_USE_FUSE=1
-python train.py
-```
-
-### Missing Dependencies
-
-```bash
-pip install --upgrade -r requirements.txt
-```
-
-## License
-
-This code is released under the MIT License. See LICENSE file for details.
-
-The DAT model and GIT model have their own licenses:
-- DAT: Apache-2.0 License
-- GIT: MIT License
-
 ## Acknowledgments
 
 This code is based on and builds upon the following excellent works:
@@ -365,4 +307,4 @@ This code is based on and builds upon the following excellent works:
 
 ## Contact
 
-For questions or issues, please open an issue on GitHub.
+For questions or issues, please contact us at semini@hanyang.ac.kr or open an issue on GitHub.
